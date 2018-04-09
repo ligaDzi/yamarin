@@ -1,0 +1,29 @@
+<div class="order_cont">
+    <form class="order_form" action="/mail" method="POST">
+        <h3>
+            Если Вы желаете купить катер или у Вас возникли вопросы, напишите нам, мы оперативно ответим.
+        </h3>
+        <div class="order_in">
+            <p class="order_in_sub">
+                <input type="text" name="username" required="required"  placeholder="Ваше имя" />
+            </p>
+            <p class="order_in_sub">
+                <!--
+                    email - браузер проводит валидацию корректности введенного email адреса. 
+                    При работе в мобильном браузере будет отображаться специальная экранная клавиатура с символом @ и .com
+                -->
+                <input type="email" name="email" required="required" placeholder="Ваш email" />
+
+            </p>
+            <p class="order_in_sub">
+                <!--tel - мобильный браузер будет отображать экранную клавиатуру с цифрами-->
+                <input type="tel" name="phone" placeholder="Ваш телефон"/>
+            </p>
+            <p class="order_in_sub">
+                <textarea name="mess" rows="12" placeholder="Ваш вопрос или пожелание"></textarea>
+            </p>
+        </div>
+        <button type="submit" id="btn_send">Отправить</button>
+
+    </form>
+</div>

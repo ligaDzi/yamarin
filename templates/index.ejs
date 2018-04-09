@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Yamarin катера</title>
+    
+    <link href="lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="lib/owl.carousel.min.css" rel="stylesheet" />
+
+    <link href="css/menu_mobile.less" rel="stylesheet/less" type="text/css" />
+    <link href="css/main.less" rel="stylesheet/less" type="text/css" />    
+    <link href="css/menu.less" rel="stylesheet/less" type="text/css" />    
+    <link href="css/mobile_info.less" rel="stylesheet/less" type="text/css" />  
+    <link href="css/boat_page.less" rel="stylesheet/less" type="text/css" /> 
+    <link href="css/infoPage.less" rel="stylesheet/less" type="text/css" /> 
+    <link href="css/order.less" rel="stylesheet/less" type="text/css" /> 
+
+    <script src="lib/less.js"></script>
+
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/owl.carousel.min.js"></script>    
+
+    <link href="css/carousel.css" type="text/css" rel="stylesheet"/>
+    <script src="js/addModule.js"></script>
+    <script src="js/carouselMyModule.js"></script>
+    <script src="js/ajaxMyModule.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/mobile_menu.js"></script>
+    <script src="js/animateMyModule.js"></script>
+    
+    <script src="lib/modernizr.custom.52481.js"></script>
+
+    <link href="lib/jquery-ui.min.css" rel="stylesheet" />
+    <link href="lib/jquery-ui.structure.min.css" rel="stylesheet" />
+    <link href="lib/jquery-ui.theme.min.css" rel="stylesheet" />
+    <script src="lib/jquery-ui.min.js"></script>
+
+
+    
+</head>
+<body>
+    <div id="foundation">
+        <!-- Логотип -->
+        <a id="logo" href="/">
+            <div class="logo_img"></div>
+        </a>
+
+        <!-- Информация о катере в полноразмерной версии -->
+        <div id="infoPage">
+            <div class="infoPage_close">
+                <a id="btn_close">
+                    x
+                </a>
+            </div>
+            <div class="infoPage_cont"></div>
+        </div>
+
+        <!--Контент в полноразмерной версии-->
+        <div id="content">
+                <!-- Карусель -->
+                <div class="carousel">
+                    <div class="carousel_container">
+                        <div class="owl-demo">
+                            <div class="owl-carousel">
+                                <% for(var i=0; i<imges.length; i++) {%>
+                                <div class="item">
+                                    <div style="background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522837171/yamarin/<%=imges[i] %>');" class="slidImg ">
+                                    </div>
+                                </div>
+                                <%} %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Дополнительное меню в полноразмерной версии-->
+                <div id="other_menu" class="is_notActive">
+                    <% for(var m=0; m<boats.length; m++) {%>
+
+                        <div class="other_menu_cont <%=boats[m].nameModel %>">
+
+                            <% for(var b=0; b<boats[m].modelBoats.length; b++) {%>
+
+                                <a class="other_menu_sub" data-idBoat=<%=boats[m].modelBoats[b]._id %>>
+                                    <div class="other_menu_txt"><%=boats[m].modelBoats[b].name %></div>
+                                    <div class="other_menu_sub_line"></div>
+                                </a>
+                                
+                            <%} %>
+
+                        </div>
+
+                    <%} %>
+                </div>
+
+                <!-- Кнопка заказать в мобильной версии сайта -->
+                <a id="mobile_order">
+                    <span>Заказать</span>
+                </a>
+
+                
+        </div>
+
+        <!--Информация о катере в мобильной версии-->
+        <div id="mobille_info">
+            <br/><br/><br/><br/>
+            <div class="info_yamarin">
+                <div class="info_yamarin_txt">
+                    <a>
+                        <h2>Катер Yamarin</h2>
+                    </a>
+                    <h4>Yamarin вдохнет лето в вашу жизнь.</h4>
+                    <p class="info_parag">Благодаря высокому качеству Yamarin Ваше плавание будет легким, безопасным и комфортным.</p>
+                </div>
+                <div class="info_yamarin_img img_center"> 
+                </div>
+            </div>
+            <br/><br/><br/><br/>
+            <div class="info_yamCross">
+                <div class="info_yamCross_header">
+                    <div class="info_yamCross_header_img img_center"> 
+                    </div>
+                    <div class="info_yamCross_header_txt">
+                        <a>
+                            <h2>КАТЕРА YAMARIN CROSS</h2>
+                        </a>
+                        <h4>Алюминий для суровых условий</h4>
+                    </div>
+                </div>
+                <div class="info_yamCross_footer">
+                    <p class="info_parag">Катера Yamarin Cross выполнены из алюминиевого сплава 5083, который прочнее сплава, традиционно используемого для постройки таких судов. </p>
+                    <br/>
+                    <p class="info_parag">Благодаря сочетанию алюминиевого корпуса и практичной стеклопластиковой палубной надстройки вы можете наслаждаться плаванием при любой погоде.</p>
+                    <br/>
+                    <p class="info_parag">А низкий уровень шума и легкость управления cделают ваше плавание комфортным и приятным.</p>
+                </div>
+            </div>
+            <br/><br/><br/><br/>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div class="menu_mob">
+            <div class="menu_mob_sub">
+                <div class="menu_mob_sub_margin">
+                    <div class="menu_mob_plastic">
+                        <h2>Пластиковые модели</h2>
+                        <div class="menu_mob_plastic_sub">
+
+                            <% for(var p=0; p<plasticData.length; p++) {%>
+
+                                <div class="menu_mob_plastic_sub_conteiner">
+                                    <div class="menu_mob_plastic_btn_head">
+                                        <span><%=plasticData[p].nameModel %></span>
+                                    </div>
+                                    <div class="menu_mob_plastic_btn_cont">
+
+                                        <% for(var x=0; x<plasticData[p].modelBoats.length; x++) {%>
+
+                                            <a class="menu_mob_btn_list" data-idBoat=<%=plasticData[p].modelBoats[x]._id %>>
+                                                <div class="btn_list_icon">
+                                                    <hr class="icon_horiz"/>
+                                                </div>
+                                                <div class="btn_list_txt">
+                                                    <%=plasticData[p].modelBoats[x].name %>
+                                                </div>
+                                            </a>
+
+                                        <%} %>
+
+                                    </div>
+                                </div>
+
+                            <%} %>
+
+                        </div>
+                    </div>
+                    <div class="menu_mob_aluminum">
+                        <h2>Алюминиевые модели</h2>
+                        <div class="menu_mob_aluminum_sub">
+
+                            <% for(var a=0; a<aluminData.length; a++) {%>
+
+                                <div class="menu_mob_aluminum_sub_conteiner">
+                                    <div class="menu_mob_aluminum_btn_head">
+                                        <span><%=aluminData[a].nameModel %></span>
+                                    </div>
+                                    <div class="menu_mob_aluminum_btn_cont">
+        
+                                        <% for(var y=0; y<aluminData[a].modelBoats.length; y++) {%>
+        
+                                            <a class="menu_mob_btn_list" data-idBoat=<%=aluminData[a].modelBoats[y]._id %>>
+                                                <div class="btn_list_icon">
+                                                    <hr class="icon_horiz"/>
+                                                </div>
+                                                <div class="btn_list_txt">
+                                                    <%=aluminData[a].modelBoats[y].name %>
+                                                </div>
+                                            </a>
+        
+                                        <%} %>
+        
+                                    </div>
+                                </div>
+        
+                            <%} %>
+                            
+                        </div>
+                    </div>
+                    <div class="menu_mob_instruction">
+                        <h2>Инструкции</h2>
+                        <div class="menu_mob_instruction_sub">
+                            <div class="menu_mob_instruction_sub_conteiner">
+                                <div class="menu_mob_instruction_btn_head mob_instruction">
+                                    <span>Инструкции по уходу</span>
+                                </div>
+                                <div class="menu_mob_instruction_btn_head mob_guarant">
+                                    <span>Гарантии</span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="hamburger_mob" id="hamburger-1">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+
+        </div>
+        
+
+        <footer id="menu">
+            <!--Меню в полноразмерной версии и подвал в мобильной версии-->
+            <div id="main_menu">
+                <!-- Кнопка меню в полноразмерной версии сайта -->
+                <div class="menu_hamburger">
+                    <div class="box_menu">
+                        <div class="hamburger" id="hamburger-4">
+                            <span class="line"></span>
+                            <span class="line"></span>
+                            <span class="line"></span>
+                        </div>
+                    </div>                    
+                </div>
+                <!-- Разделы меню -->
+                <div class="menu_section">
+                    <!-- Основное -->
+                    <div class="menu_subsections this_main">
+                        <a class="menu_sub plastic_menu">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Пластиковые модели</span></div>
+                        </a>
+                        <a class="menu_sub alumin_menu">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Алюминиевые модели</span></div>
+                        </a>
+                        <a class="menu_sub instruction_menu">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Инструкции</span></div>
+                        </a>
+                    </div>
+                    <!-- Подменю "Пластиковые модели" -->
+                    <div class="menu_subsections this_plastic is_notActive">
+                        <a class="menu_sub dayCruiser">
+                            <hr noshade>
+                            <div class="menu_sub_btn"><span>Day Cruiser</span></div>
+                        </a>
+                        <a class="menu_sub plasticConsole">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Console</span></div>
+                        </a>
+                        <a class="menu_sub plasticCabin">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Cabin</span></div>
+                        </a>
+                        <a class="menu_sub plasticBowRider">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Bow Rider</span></div>
+                        </a>
+                        <a class="menu_sub hardTop">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Hard Top</span></div>
+                        </a>
+                    </div>
+                    <!-- Подменю "Алюминиевые модели" -->
+                    <div class="menu_subsections this_alumin is_notActive">
+                        <a class="menu_sub aluminCabin">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Cabin</span></div>
+                        </a>
+                        <a class="menu_sub centerConsole">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Center Console</span></div>
+                        </a>
+                        <a class="menu_sub aluminBowRider">
+                            <hr noshade>
+                            <div class="menu_sub_btn "><span>Bow Rider</span></div>
+                        </a>
+                    </div>
+                    <!-- Подменю "Инструкции" -->
+                    <div class="menu_subsections this_instruction is_notActive">
+                        <a class="menu_sub">
+                            <hr noshade>
+                            <div id="care_instr" class="menu_sub_btn"><span>Инструкции по уходу</span></div>
+                        </a>
+                        <a class="menu_sub">
+                            <hr noshade>
+                            <div id="guarantees" class="menu_sub_btn "><span>Гарантии</span></div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Кнопка заказа -->
+                <a id="order_desctop" class="menu_order">
+                    <span>Заказать</span>                
+                </a>
+                <!-- Копирайт -->
+                <div class="menu_copyright">
+                    <p>
+                        <span>Материалы взяты с сайта </span>
+                        <a href="http://www.yamarin.com/ru/Yamarin-Cross/">yamarin.com</a>
+                        <span> 2018</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <script src="js/myModernaizer.js"></script>
+</body>
+</html>

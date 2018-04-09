@@ -1,0 +1,97 @@
+
+<div class="owl-carousel">
+    <% for(var i=1; i<=boat.imgs; i++) {%>
+    <div class="item itemInfo">
+        <div style="background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522838627/yamarin/boats/<%=boat.imgFolder %>/<%=i %>.jpg');" class="slidImg ">
+        </div>
+        <!-- Второй слайд с описанием катера -->
+        <% if(i === 2) {%>
+        <div class="twoSlide bgBlue">
+            <h2><%=boat.name %></h2>
+            <div class="twoSlide_cont">                
+                <div class="twoSlide_cont_info" >
+                    <% for(var t=0; t<boat.info.length; t++) {%>
+                        <p><%=boat.info[t] %></p>
+                    <%} %>
+                </div>
+            </div>
+        </div>
+        <%} %>
+
+        <!-- Последний слайд с техническими характеристиками катера -->
+        <% if(i === (boat.imgs)) {%>
+        <div class="lastSlide bgBlack">
+            <div class="lastSlide_cont anima">
+                <div class="lastSlide_cont_techCharacter">
+                    <div class="lastSlide_cont_techCharacter_logo"></div>
+                    <div class="lastSlide_cont_techCharacter_txt">
+                        <p>Ширина</p>
+                        <p><%=boat.width %> м</p>
+                    </div>
+                </div>
+                <div class="lastSlide_cont_techCharacter">
+                    <div class="lastSlide_cont_techCharacter_logo"></div>
+                    <div class="lastSlide_cont_techCharacter_txt">
+                        <p>Длина</p>
+                        <p><%=boat.cterLength %> м</p>
+                    </div>
+                </div>
+                <div class="lastSlide_cont_techCharacter">
+                    <div class="lastSlide_cont_techCharacter_logo"></div>
+                    <div class="lastSlide_cont_techCharacter_txt">
+                        <p>Вес</p>
+                        <p><%=boat.weight %> кг</p>
+                    </div>
+                </div>
+                <div class="lastSlide_cont_techCharacter">
+                    <div class="lastSlide_cont_techCharacter_logo"></div>
+                    <div class="lastSlide_cont_techCharacter_txt">
+                        <p>Вместимость</p>
+                        <p><%=boat.spaciousness %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%} %>
+    </div>
+    <%} %>
+</div>
+
+<div class="info_cont">
+    <h2 class="info_cont_name"><%=boat.name %></h2>
+    <div class="info_cont_txt">
+        <% for(var q=0; q<boat.info.length; q++) {%>
+            <p><%=boat.info[q] %></p>
+        <%} %>
+    </div>
+    <div class="info_cont_techCharacter">
+        <div class="info_cont_character">
+            <div class="info_cont_character_logo"></div>
+            <div class="info_cont_character_txt">
+                <p>Ширина</p>
+                <p><%=boat.width %> м</p>
+            </div>
+        </div>
+        <div class="info_cont_character">
+            <div class="info_cont_character_logo"></div>
+            <div class="info_cont_character_txt">
+                <p>Длина</p>
+                <p><%=boat.cterLength %> м</p>
+            </div>
+        </div>
+        <div class="info_cont_character">
+            <div class="info_cont_character_logo"></div>
+            <div class="info_cont_character_txt">
+                <p>Вес</p>
+                <p><%=boat.weight %> кг</p>
+            </div>
+        </div>
+        <div class="info_cont_character">
+            <div class="info_cont_character_logo"></div>
+            <div class="info_cont_character_txt">
+                <p>Вместимость</p>
+                <p><%=boat.spaciousness %></p>
+            </div>
+        </div>
+    </div>
+</div>

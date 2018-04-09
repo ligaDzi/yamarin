@@ -1,0 +1,190 @@
+﻿// В этом css определяються размеры главных элементов страницы
+// и их изменения в зависимости от устроиства с помощью которого просмотривается сайт.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::selection {
+        background: #c0060a;
+        color: #fff;
+    }
+}
+body{
+    font-family: Century Gothic, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+a{
+    color:#3d4fa0de;
+
+    &:hover{
+        cursor: pointer;
+        color: #ee931d;
+    }
+}
+#foundation{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#logo{
+    display: block;
+    position: absolute;
+    width: 250px;
+    height: 90px;
+    top: 100px;
+    left: 40%;
+    z-index: 22;
+    cursor: pointer;
+    transition:  ease-in-out .5s;
+
+    &:hover{
+        background-color: rgba(233, 245, 255, 0.767);
+        border-radius: 10px;
+        box-shadow:  0 0 30px #9b9b9b;
+    }
+
+    .logo_img{
+        width: 100%;
+        height: 100%;        
+        margin: 10px;
+        background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522837310/yamarin/logo/cross_logo.png');
+        background-repeat: no-repeat;
+    }
+}
+
+#infoPage{
+    display: none;
+    position: absolute;
+    z-index: 66;
+    width: 70%;
+    height: 70%;
+    min-height: 100vh - 15%;
+    max-height: 100vh - 15%;
+    left: -150%;
+    margin-top: 3em;
+    background-color:rgba(255, 255, 255, 0.938);
+    border: 1px solid rgb(63, 63, 63);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+#content{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-color: #ade5ff;
+}
+
+#mobille_info{
+    display: block;
+    position: relative;
+    width: 100%;
+    min-height: 940px;
+    background-color: #ebebeb;
+}
+
+#menu{
+    position: relative;
+    width: 100%;
+    height: 100px;  
+    z-index: 20;
+}
+
+
+#main_menu{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+
+/* Для дисплея с разрешением больше 640 пискелей*/
+@media (min-width: 640px) {
+    #content{
+        height: 550px;
+    }
+    
+    #mobille_info{
+        min-height: 1000px;
+    }
+
+}
+
+/* Для дисплея с разрешением больше 768 пискелей в ширину  и  больше 1024 пискелей в высоту */
+@media (min-width: 768px) and (min-height: 1024px) {
+    #content{
+        height: 600px;
+    }
+    
+    #mobille_info{
+        min-height: 1000px;
+    }
+
+}
+
+
+/* Для дисплея с разрешением больше 1024 пискелей */
+@media (min-width: 1024px) {
+
+    #logo{
+        top: 50px;
+    }
+    #infoPage{
+        display: block;
+    }
+    #content{
+        position: fixed;
+        width: 100%;
+        height: 95%;
+        background-color: #2891c2;
+    }
+    #mobille_info{
+        display: none;
+    }
+    #menu{
+        position: fixed;
+        width: 100%;
+        height: 5%;
+        bottom: 0;
+    }
+    
+    #other_menu{
+        position: absolute;
+        width: 100%;
+        height: 5%;   
+        bottom: 0px;
+        z-index: 10;
+        background-color: #155C92;
+        opacity: .7;    
+    }    
+
+}
+
+/* Для дисплея с разрешением больше 1024 пискелей в ширину  и  больше 1366 пискелей в высоту */
+@media (min-width: 1024px) and (min-height: 1366px) {
+    #infoPage{
+        display: none;        
+    }
+
+    #content{
+        position: relative;
+        width: 100%;
+        height: 600px;
+    }
+    
+    #mobille_info{
+        display: block;
+        position: relative;
+        width: 100%;
+        min-height: 665px;
+    }
+    
+    #menu{
+        position: relative;
+        width: 100%;
+        height: 100px;  
+        z-index: 20;
+    }
+    
+}
+
+

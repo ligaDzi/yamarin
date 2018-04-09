@@ -1,0 +1,71 @@
+.owl-demo {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel_container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: -webkit-grab;
+}
+.slidImg {
+    width: 100%;
+    min-height: 700px;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.5s;
+}
+.item{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Для дисплея с разрешением больше 640 пискелей*/
+@media (min-width: 640px) {
+    .slidImg {
+        min-height: 550px;
+    }
+
+}
+
+/* Для дисплея с разрешением больше 1024 пискелей в ширину и  больше 768 пискелей в высоту */
+@media (min-width: 1024px)  and (min-height: 768px) {
+    .slidImg {
+        min-height: 740px;
+    }
+}
+
+/* Для дисплея с разрешением больше 768 пискелей в ширину  и  больше 1024 пискелей в высоту */
+@media (min-width: 768px) and (min-height: 1024px) {
+    .slidImg {
+        min-height: 600px;
+    }    
+}
+
+/* Для дисплея с разрешением больше 1024 пискелей в ширину и  больше 1366 пискелей в высоту*/
+@media (min-width: 1024px) and (min-height: 1366px) {
+    .slidImg {
+        min-height: 600px;
+    }
+}
+/* Для дисплея с разрешением больше 1025 пискелей */
+@media (min-width: 1025px) {
+    .slidImg {
+        min-height: 900px;
+    }
+
+}
+
+/* Для дисплея с разрешением больше 1366 пискелей в ширину и  больше 1024 пискелей в высоту*/
+@media (min-width: 1366px) and (min-height: 1024px) {
+    .slidImg {
+        min-height: 1000px;
+    }
+}
+
+

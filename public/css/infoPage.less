@@ -1,0 +1,134 @@
+
+.flex(){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.infoPage_close{
+    width: 100%;
+    height: 7%;   
+}
+#btn_close{
+    float: right;
+    padding: 10px 20px;
+    color: rgb(124, 124, 124);
+    font-size: 1.8em;
+    font-weight: 900;
+    &:hover{
+        color: rgb(44, 44, 44);
+    }
+}
+
+.infoPage_cont{
+    width: 100%;
+    height: 93%;
+}
+
+.header_h2{
+    margin-bottom: 2em;
+    text-align: center;  
+    text-transform: uppercase;  
+    font-size: 2em;
+    color: rgb(48, 48, 48);    
+}
+#accordion{
+    padding: 0 2em;
+    p{        
+        margin: 1em 0;
+        font-size: .9em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height:1.6;
+        color: rgb(61, 61, 61);        
+    }
+    ul{
+        margin: 0 1em;
+        li{
+            margin: .3em 0;
+        }
+    }
+}
+.instruct_cont{
+    .flex();
+    width: 100%;
+    height: 85%;
+}
+.instruct_nav{
+    width: 20%;
+    border-right: 1px solid rgb(0, 0, 0);
+    ul{
+        width: 100%;
+        list-style: none;
+
+        li{
+            width: 100%;
+            font-size: 0.8em;
+            font-weight: 800; 
+            line-height:1.5;            
+            padding:0 7px 0 0;
+            border-bottom: 1px solid rgb(0, 0, 0);
+
+            &:last-child{
+                border-bottom: none;
+            }
+            a{                
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding:10px 6px 13px 13px;
+                color: rgb(0, 0, 0); 
+                text-transform: uppercase;
+            }
+            &:hover{
+                background-color: rgb(50, 130, 190);
+                a{                    
+                    color: rgb(75, 31, 31);
+                    background-color: rgb(252, 252, 252); 
+                }
+            }
+        }
+    }
+}
+.instruct_sub_act{
+    background-color: rgb(50, 130, 190);
+    a{                    
+        color: rgb(65, 25, 25);
+        background-color: rgb(252, 252, 252); 
+    }
+}
+
+.instruct_info{
+    width: 80%;
+
+    p, h4, ul, ol{
+        margin: 1em 2em;
+        letter-spacing: 1px;
+        line-height:1.6;
+    }
+    p, ul, ol{
+        font-size: .9em; 
+        font-weight: 600;       
+        color: rgb(61, 61, 61);
+    }
+
+    h4{
+        margin-top: 3em;
+        text-align: center;
+        font-size: 1.1em; 
+        font-weight: 800;       
+        color: rgb(0, 0, 0);
+    }
+    li{
+        margin: 0.3em 2em;
+    }
+
+}
+.instruct_info_bg{
+    background-color: #fff;    
+}
+.instruct_info_over{
+    overflow: auto;
+}
+.mrg_bottom{
+    margin-bottom: 3em; 
+}

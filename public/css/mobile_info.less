@@ -1,0 +1,198 @@
+// Стили информации о катере в мобильной версии
+@h2Color:rgb(35, 54, 139);
+@h4Color:rgb(75, 75, 75);
+@pColor: rgb(80, 80, 80);
+.flex(){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.justifyFlex() {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+}
+.info_yamarin{
+    .flex(); 
+    position: relative;  
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    border-left: 10px solid rgb(68, 196, 255);
+}
+.info_yamarin_txt{
+    width: 60%;
+    margin: 2em 0 2em 2em;
+    background-color: rgb(252, 252, 250);
+
+    h2{
+        margin: .5em ;        
+        text-transform: uppercase;
+        color: @h2Color;
+    }
+    h4{
+        margin-left: .7em;
+        margin-bottom: 2rem;
+        color: @h4Color;
+    }
+    p{
+        margin: 0 .7em;
+    }
+
+}
+.info_parag{
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height:1.8;        
+    color: @pColor;
+}
+.info_yamarin_img{
+    width: 35%;
+    margin: 2em 2em 2em 0;
+    background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522837169/yamarin/mobile1_600.jpg');
+
+}
+.img_center{
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.info_yamCross{
+    position: relative; 
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    border-left: 10px solid rgb(255, 237, 71);
+
+}
+.info_yamCross_header{
+    .flex();
+    width: 100%;
+    height: 50%;
+}
+.info_yamCross_header_img{
+    width: 35%;
+    margin: 2em 0 2em 2em;
+    background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522837169/yamarin/mobile5_600.jpg');
+}
+.info_yamCross_header_txt{
+    width: 60%;
+    margin: 2em 2em 2em 0;
+    background-color: rgb(252, 252, 250);
+
+    h2{
+        margin: .5em 4rem;        
+        text-transform: uppercase;
+        color: @h2Color;
+    }
+    h4{
+        margin-left: 4rem;
+        margin-bottom: 2rem;
+        color: @h4Color;
+    }
+}
+.info_yamCross_footer{
+    width: 100%;
+    height: 35%; 
+    margin-top: 2rem;   
+    p{
+        margin: 0 2rem;
+    }
+}
+
+// Стили для информации по отдельному катеру
+
+.info_cont{
+    min-height: 1000px;
+    margin: 0 2em;
+    background-color: #fff;
+}
+
+.info_cont_name{
+    padding: 3em 0 1em 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.info_cont_txt{
+    margin: 0 4em;
+
+    p{
+        margin: 1em 2em;
+        font-size: 1em;
+        font-weight: 700;
+        line-height: 1.6;
+        color: rgb(87, 87, 87);
+    }
+}
+
+.info_cont_techCharacter{
+    .flex();  
+    .justifyFlex(); 
+    height: 300px;
+    padding: 4em 0 3em 0;
+    margin: 0 10em;
+    
+}
+
+.info_cont_character{
+    width: 18%;
+    height: 100%;
+    &:nth-of-type(1){
+        .info_cont_character_logo{
+            background: url("../img/icon/boat-outline.png") no-repeat;
+            background-size: 100% 100%;
+            background-position: center center;
+            
+        }        
+    }
+    &:nth-of-type(2){
+        .info_cont_character_logo{
+            background: url("../img/icon/boat-inside.png") no-repeat;
+            background-size: 100% 100%;
+            background-position: center center;
+        }
+    }
+    &:nth-of-type(3){
+        .info_cont_character_logo{
+            background: url("../img/icon/weight.png") no-repeat;
+            background-size: 70% 70%;
+            background-position: center center;
+        }
+    }
+    &:nth-of-type(4){
+        .info_cont_character_logo{
+            background: url("../img/icon/group.png") no-repeat;
+            background-size: 80% 80%;
+            background-position: center center;
+        }
+    }
+}
+
+.info_cont_character_logo{
+    width: 100%;
+    height: 70%;
+}
+
+.info_cont_character_txt{
+    width: 100%;
+    height: 30%;
+    text-align: center;
+    font-size: .9em;
+    p{
+        margin: .7em 0;
+    }
+}
+
+.bg_mob_info{
+    margin: 0 2em;
+    padding: 2em;
+    background-color: #fff; 
+    
+    h3{
+        margin-top: 3em;
+    }
+}
