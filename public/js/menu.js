@@ -174,6 +174,9 @@ $(document).ready(function () {
         otherMenuSub.removeClass("other_menu_sub_act");
         $(this).addClass("other_menu_sub_act");
 
+        if($('.preloader').css('display') == 'none'){
+            $('.preloader').fadeIn();
+        }
         MyApp.ajax.getBoatByID(e);
     });
 
