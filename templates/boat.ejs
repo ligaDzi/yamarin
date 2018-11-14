@@ -2,7 +2,8 @@
 <div class="owl-carousel">
     <% for(var i=1; i<=boat.imgs; i++) {%>
     <div class="item itemInfo">
-        <div style="background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522838627/yamarin/boats/<%=boat.imgFolder %>/<%=i %>.jpg');" class="slidImg ">
+        <div class="slidImg ">
+            <img src="http://res.cloudinary.com/alexcloudi/image/upload/v1522838627/yamarin/boats/<%=boat.imgFolder %>/<%=i %>.jpg" alt="" class="bcImg">
         </div>
         <!-- Второй слайд с описанием катера -->
         <% if(i === 2) {%>
