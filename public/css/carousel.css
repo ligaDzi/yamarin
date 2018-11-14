@@ -68,6 +68,7 @@
 @media (min-width: 1025px) {
     .slidImg, .bcImg {
         min-height: 900px;
+        max-height: 900px;
     }
 
 }
@@ -76,6 +77,7 @@
 @media (min-width: 1366px) and (min-height: 1024px) {
     .slidImg, .bcImg {
         min-height: 1000px;
+        max-height: 1000px;
     }
 }
 
