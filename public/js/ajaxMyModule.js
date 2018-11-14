@@ -10,7 +10,10 @@ MyApp.ajax = (function () {
     function _getBoatByID(e){
     
         const id = e.currentTarget.getAttribute('data-idBoat');            
-           
+    
+        /* Сделать видимым прелоадер */
+        $('.preloader').fadeIn('fast');
+
         $.ajax({
             type: "GET",
             url: "/boat/" + id,

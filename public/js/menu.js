@@ -174,7 +174,6 @@ $(document).ready(function () {
         otherMenuSub.removeClass("other_menu_sub_act");
         $(this).addClass("other_menu_sub_act");
 
-        $('.preloader').fadeIn();
         MyApp.ajax.getBoatByID(e);
     });
 
