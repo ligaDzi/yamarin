@@ -11,6 +11,7 @@ MyApp.ajax = (function () {
     
         const id = e.currentTarget.getAttribute('data-idBoat');            
     
+        $('.preloader').fadeIn('slow');
         $.ajax({
             type: "GET",
             url: "/boat/" + id,
@@ -23,6 +24,9 @@ MyApp.ajax = (function () {
 
                 $('.owl-demo').html(carousel);
                 $('#mobille_info').html(info);
+
+                $('.preloader').delay(500).fadeOut('slow');
+                
                 MyApp.carousel.initSlider();
 
                 // анимация появления информации о технических характеристиках катера
