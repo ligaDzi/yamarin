@@ -12,7 +12,7 @@ MyApp.ajax = (function () {
         const id = e.currentTarget.getAttribute('data-idBoat');            
     
         /* Сделать видимым прелоадер */
-        $('.preloader').fadeIn('fast');
+        $('.preloader').fadeIn(10);
 
         $.ajax({
             type: "GET",
@@ -27,7 +27,7 @@ MyApp.ajax = (function () {
                 $('.owl-demo').html(carousel);
                 $('#mobille_info').html(info);
 
-                /* Скрыть прелоадер через 2 секунды */
+                /* Скрыть прелоадер после загрузки изображений */
                 $('.bcImg').on('load', function(){
 
                     $('.preloader').delay(500).fadeOut('slow');
