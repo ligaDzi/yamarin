@@ -180,7 +180,7 @@ $(document).ready(function () {
 });
 
 /* Убрать прелоадер после полной загрузки страницы (включая загрузку картинок) */
-$('.slidImg').on('load', function () {
+$(window).on('load', function () {
     $('.preloader').fadeIn();
     $('.preloader').delay(500).fadeOut('slow');
 });
