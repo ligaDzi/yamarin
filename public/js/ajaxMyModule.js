@@ -18,25 +18,28 @@ MyApp.ajax = (function () {
             type: "GET",
             url: "/boat/" + id,
             success: (data)=>{
-                // $(data) - так создается DOM дерево в виде массива из пришедших клиенту данных
-                // $(data)[0] - так берется первый div с классом ".owl-carousel" из DOM дерева
-                const dataDOM = $(data);
-                const carousel = dataDOM[0];  
-                const info = dataDOM[2];
 
-                $('.owl-demo').html(carousel);
-                $('#mobille_info').html(info);
-
-                /* Скрыть прелоадер после загрузки изображений */
-                $('.bcImg').on('load', function(){
-
-                    $('.preloader').delay(500).fadeOut('slow');
-                });
-
-                MyApp.carousel.initSlider();
-
-                // анимация появления информации о технических характеристиках катера
-                MyApp.myAnima.showTechHarac();
+                setTimeout(function(){
+                    // $(data) - так создается DOM дерево в виде массива из пришедших клиенту данных
+                    // $(data)[0] - так берется первый div с классом ".owl-carousel" из DOM дерева
+                    const dataDOM = $(data);
+                    const carousel = dataDOM[0];  
+                    const info = dataDOM[2];
+    
+                    $('.owl-demo').html(carousel);
+                    $('#mobille_info').html(info);
+    
+                    /* Скрыть прелоадер после загрузки изображений */
+                    $('.bcImg').on('load', function(){
+    
+                        $('.preloader').delay(500).fadeOut('slow');
+                    });
+    
+                    MyApp.carousel.initSlider();
+    
+                    // анимация появления информации о технических характеристиках катера
+                    MyApp.myAnima.showTechHarac();
+                }, 200);
             },
             error: (err)=>{
                 console.log("err");
