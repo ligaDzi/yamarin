@@ -179,6 +179,11 @@ $(document).ready(function () {
 
 });
 
+/* Убрать прелоадер после полной загрузки страницы (включая загрузку картинок) */
+$(window).load(function () {
+    $('.preloader').addClass('done');
+});
+
 // функция отображающая катера выбронного модельного ряда на панели дополнительного меню (Пластиковые)
 function showSubOMPlastic(menuAct) {
     if(menuAct.is(".dayCruiser")){        
