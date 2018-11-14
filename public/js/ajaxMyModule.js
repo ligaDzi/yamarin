@@ -11,7 +11,9 @@ MyApp.ajax = (function () {
     
         const id = e.currentTarget.getAttribute('data-idBoat');            
     
+        /* Сделать видимым прелоадер */
         $('.preloader').fadeIn('slow');
+
         $.ajax({
             type: "GET",
             url: "/boat/" + id,
@@ -25,7 +27,8 @@ MyApp.ajax = (function () {
                 $('.owl-demo').html(carousel);
                 $('#mobille_info').html(info);
 
-                $('.preloader').delay(1000).fadeOut('slow');
+                /* Скрыть прелоадер через 2 секунды */
+                $('.preloader').delay(2000).fadeOut('slow');
 
                 MyApp.carousel.initSlider();
 
