@@ -180,7 +180,7 @@ $(document).ready(function () {
 });
 
 /* Убрать прелоадер после полной загрузки страницы (включая загрузку картинок) */
-$(window).ready(function () {
+$(window).on('load', function () {
     $('.preloader').addClass('done');
 });
 
