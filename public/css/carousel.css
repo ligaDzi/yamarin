@@ -53,6 +53,7 @@
 @media (min-width: 768px) and (min-height: 1024px) {
     .slidImg, .bcImg {
         min-height: 600px;
+        max-height: 600px;
     }    
 }
 
@@ -60,6 +61,7 @@
 @media (min-width: 1024px) and (min-height: 1366px) {
     .slidImg, .bcImg {
         min-height: 600px;
+        max-height: 600px;
     }
 }
 /* Для дисплея с разрешением больше 1025 пискелей */
