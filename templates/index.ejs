@@ -81,7 +81,8 @@
 
                                     <b class="loading"></b>
 
-                                    <div style="background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522837171/yamarin/<%=imges[i] %>');" class="slidImg ">
+                                    <div class="slidImg ">
+                                        <img src="http://res.cloudinary.com/alexcloudi/image/upload/v1522837171/yamarin/<%=imges[i] %>" class="image" />
                                     </div>
                                 </div>
                                 <%} %>
@@ -95,7 +96,7 @@
                         if(navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i)) {
                             $('.loading').hide();
                         }
-                        $('.slidImg').load(function() {
+                        $('.image').load(function() {
                             $(this).parent().find(".loading").hide();
                         });
                     });
