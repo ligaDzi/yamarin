@@ -80,7 +80,7 @@
                             <div class="owl-carousel">
                                 <% for(var i=0; i<imges.length; i++) {%>
                                 <div class="item">
-                                    <div style="background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522837171/yamarin/<%=imges[i] %>');" class="slidImg ">
+                                    <div class="item_image" style="background-image: url('http://res.cloudinary.com/alexcloudi/image/upload/v1522837171/yamarin/<%=imges[i] %>');" class="slidImg ">
                                     </div>
                                 </div>
                                 <%} %>
@@ -94,7 +94,7 @@
                         if(navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i)) {
                             $('.loading').hide();
                         }
-                        $('.image').load(function() {
+                        $('.item_image').load(function() {
                             $(this).parent().find(".loading").hide();
                         });
                     });
