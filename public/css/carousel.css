@@ -25,9 +25,14 @@
     height: 100%;
 }
 
+.bcImg{
+    width: 100%;
+    min-height: 700px;
+}
+
 /* Для дисплея с разрешением больше 640 пискелей*/
 @media (min-width: 640px) {
-    .slidImg {
+    .slidImg, .bcImg {
         min-height: 550px;
     }
 
@@ -35,27 +40,27 @@
 
 /* Для дисплея с разрешением больше 1024 пискелей в ширину и  больше 768 пискелей в высоту */
 @media (min-width: 1024px)  and (min-height: 768px) {
-    .slidImg {
+    .slidImg, .bcImg {
         min-height: 740px;
     }
 }
 
 /* Для дисплея с разрешением больше 768 пискелей в ширину  и  больше 1024 пискелей в высоту */
 @media (min-width: 768px) and (min-height: 1024px) {
-    .slidImg {
+    .slidImg, .bcImg {
         min-height: 600px;
     }    
 }
 
 /* Для дисплея с разрешением больше 1024 пискелей в ширину и  больше 1366 пискелей в высоту*/
 @media (min-width: 1024px) and (min-height: 1366px) {
-    .slidImg {
+    .slidImg, .bcImg {
         min-height: 600px;
     }
 }
 /* Для дисплея с разрешением больше 1025 пискелей */
 @media (min-width: 1025px) {
-    .slidImg {
+    .slidImg, .bcImg {
         min-height: 900px;
     }
 
@@ -63,7 +68,7 @@
 
 /* Для дисплея с разрешением больше 1366 пискелей в ширину и  больше 1024 пискелей в высоту*/
 @media (min-width: 1366px) and (min-height: 1024px) {
-    .slidImg {
+    .slidImg, .bcImg {
         min-height: 1000px;
     }
 }
