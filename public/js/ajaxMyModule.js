@@ -39,7 +39,7 @@ MyApp.ajax = (function () {
     
                     // анимация появления информации о технических характеристиках катера
                     MyApp.myAnima.showTechHarac();
-                }, 200);
+                }, 1000);
             },
             error: (err)=>{
                 console.log("err");
