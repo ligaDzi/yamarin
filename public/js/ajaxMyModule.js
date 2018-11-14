@@ -28,7 +28,7 @@ MyApp.ajax = (function () {
                 $('#mobille_info').html(info);
 
                 /* Скрыть прелоадер через 2 секунды */
-                $('.slidImg').eq(0).on('load', function(){
+                $(window).on('load', function(){
 
                     $('.preloader').delay(500).fadeOut('slow');
                 });
