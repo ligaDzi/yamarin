@@ -12,7 +12,7 @@ MyApp.ajax = (function () {
         const id = e.currentTarget.getAttribute('data-idBoat');            
     
         /* Сделать видимым прелоадер */
-        $('.preloader').fadeIn('slow');
+        $('.preloader').fadeIn();
 
         $.ajax({
             type: "GET",
