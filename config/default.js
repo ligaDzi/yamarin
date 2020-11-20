@@ -2,7 +2,7 @@ module.exports = {
   port: process.env.PORT || 8080,
   secret: 'mysecret',
   mongoose: {
-    uri:      process.env.MONGO_URL ||  'mongodb://localhost/yamarin',
+    uri:      process.env.MONGO_URL ||  'mongodb+srv://adli:iSt2gk_6@stal.reo9r.mongodb.net/stal?retryWrites=true&w=majority',
     options: {
       server: {
         socketOptions: {
